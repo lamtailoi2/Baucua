@@ -124,4 +124,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [src / "static"]
+STATICFILES_DIRS = [
+    src / "styles",
+    src / "JS",
+]
