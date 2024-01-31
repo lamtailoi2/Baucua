@@ -3,18 +3,18 @@ const arr = document.querySelectorAll('.cua')
 const item = ["huou", "holo", "cua", "ga", "ca", "tom"]
 
 function onclickHandler() {
-    let dice1 = item[Math.floor(Math.random() * arr.length)]
-    let dice2 = item[Math.floor(Math.random() * arr.length)]
-    let dice3 = item[Math.floor(Math.random() * arr.length)]
-    console.log(dice1, dice2, dice3)
     let result = []
-    arr.forEach((el, index) => {
-        if (index === dice1 || index === dice2 || index === dice3) {
-            
-            
-        }
-    });
-    
-    
-    
+    for (let i =0; i < 3; i++) {
+        const randomIndex = Math.floor(Math.random() * 6)
+        result.push(item[randomIndex])
+    }
+    displayResult(result)
+}
+
+function displayResult(result) {
+    console.log(result.toString());
+}
+
+function playerSelection() {
+    let selector = 
 }
