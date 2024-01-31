@@ -1,0 +1,29 @@
+body {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    color: blue;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.playground {
+    padding: 50px;
+    margin: 50px;
+}
+
+.cua {
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
