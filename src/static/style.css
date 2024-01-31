@@ -1,14 +1,10 @@
 body {
-<<<<<<< HEAD
     display: block;
-=======
->>>>>>> main
     margin: 0 auto;
 }
 
 h1 {
     color: blue;
-<<<<<<< HEAD
 }
 
 .display {
@@ -30,6 +26,4 @@ h1 {
     display: flex;
     justify-content: center;
     
-=======
->>>>>>> main
 }
