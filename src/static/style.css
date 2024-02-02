@@ -8,6 +8,7 @@ h1 {
 }
 
 .display {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,6 +18,15 @@ h1 {
 .playground {
     padding: 50px;
     margin: 50px;
+    
+}
+
+.overlay-text {
+    position: absolute;
+    color: #171717;
+    padding-left: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
 }
 
 .cua {
