@@ -84,3 +84,12 @@ h1 {
     justify-content: center;
     
 }
+
+
+.player-point {
+    display: flex;
+}
+.player-point > span {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
