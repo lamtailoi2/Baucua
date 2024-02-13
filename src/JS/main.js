@@ -25,17 +25,26 @@ const items = [
         id: 5,
         name: 'tom'
     },
-    
+
 ]
 
 let counts = {
-    cnt1: 0,
-    cnt2: 0,
-    cnt3: 0,
-    cnt4: 0,
-    cnt5: 0,
-    cnt6: 0,
+    0: 0,
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
 };
+
+let player = {
+    "point": 10000,
+    setPoint: (n) => {
+        return this.point = n
+    }
+}
+
+
 
 function onclickHandler() {
     let result = []
@@ -52,15 +61,34 @@ function displayResult(result) {
 
 
 
-function increaseCount(spanId) {
-    counts[spanId]++;
-    document.getElementById(spanId).innerHTML = counts[spanId];
-}
-
+// function increaseCount(spanId) {
+//     counts[spanId]++;
+//     document.getElementById(spanId).innerHTML = counts[spanId];
+// }
+const value = document.getElementById('point')
+value.innerHTML = `Player point: ${player.point}`
 function playerSelection(animal) {
-    let counts = [];
-    increaseCount();
-    let selection = document.querySelector(`.${animal}`)  
-    
+    let newText
+    let newCount
+    let point = player.point
+    let selection
+    if (player.point >= 1000) {
+        
+        selection = document.getElementById(`${animal}`)
+        console.log(selection);
+        newCount = document.createElement("span");
+        newCount.className = 'overlay-text'
+        newText = document.createTextNode(`${++counts[animal]}`) //update count number
+        player.point = player.point - 1000
+        console.log(counts[0]);
+        newCount.appendChild(newText)
+        selection.parentNode.insertBefore(newCount, selection)
+        if (newCount.previousSibling) {
+            newCount.parentNode.removeChild(newCount.previousSibling) //remove previous span
+        }
+        player.setPoint(player.point)
+        value.innerHTML = `Player point: ${player.point}`
+        console.log(player.point);
+    }
 
 }
